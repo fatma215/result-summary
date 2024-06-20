@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+     body{
+      cursor: pointer;
+      display: grid;
+      place-content: center;
+      height: 95vh;
+      font-family: "Hanken Grotesk", sans-serif;
+     } 
+    .holder{
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      box-shadow: hsla(194, 55%, 94%, 0.79) 7px 7px 5px;
+      border-radius: 24px;
+      }
+      .result{
+        align-items: center;
+        background:linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+        border-radius: 24px;
+        padding: 10px;
+        text-align: center;
+        font-size: 1000;
+        
+      }
+      .result p{
+        color:  rgb(168, 163, 163);
+        font-size: 18px;
+      }
+      .circle{
+        border-radius: 100%;
+        background-image:linear-gradient(180deg,hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+        color: white;
+        box-shadow: 1px rgb(27, 27, 27);
+        font-size: xx-large;
+        height: fit-content;
+        width : fit-content;
+        margin: 0 auto;
+        padding:20px 55px 5px 55px;
+        text-align: center;
+        line-height: 30px;
+      }
+      .circle p{color: aliceblue;}
+      #text{
+     
+        line-height: 20px;
+        font-weight: bold;
+        padding: 0px 20px;
+        
+      }
+      #text :first-child{
+        padding-bottom: 5px;
+        font-weight: bold;
+        font-size: x-large;
+        color: #ffffff;
+      }
+      .summary{
+        margin-right: 25px ;
+      }
+      h1{
+        margin-bottom: 0px;}
+      h2{
+        margin-left: 15px;
+        color: rgba(16, 15, 15, 0.944);
+      }
+      .summary div{
+        border-radius: 12px;
+        padding: 10px;
+        margin: 10px;
+        font-size:medium;
+        border: currentColor solid 1px;
+      }
+      #red{
+        background-color: hsla(0, 100%, 68%, 0.127); 
+        color:rgb(192, 32, 32) ;
+      }
+      #yellow{
+        background-color: hsl(39, 100%, 56%,0.127);
+        color:rgb(196, 185, 23) ;
+      }
+      #green{
+        background-color:  hsla(166, 100%, 37%, 0.127); 
+        color:rgb(2, 121, 115) ;
+      }
+      #blue{
+        background-color: hsl(234, 85%, 45%,0.127);
+        color:rgb(11, 19, 133) ; 
+      }
+      .summary p{
+        display: inline;
+        padding-left: 100px;
+        font-weight: 500;
+      }
+      .summary img{
+        margin-right: 10px;
+      }
+      .summary span{
+        color: rgb(135, 132, 132);
+        
+      }
+      #nums{
+        color: black;
+        font-weight: 700;
+      }
+      #button{
+        background-color:  hsl(224, 30%, 27%);
+        border-radius: 24px;
+        text-align: center;
+        padding: 10px;
+        margin-top: 40px;
+        color: #ffffff;
+        font-weight: 700;
+      }
+      #button:hover{
+        background-image:linear-gradient(180deg,hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+      }
+      @media screen and (max-width :600px) {
+        .holder{
+          flex-direction: column;
+        }
+      }
+  </style>
+</head>
+<body>
+
+<div class="holder">
+  <div class="result"> 
+  <p>Your Result</p><br>
+  <div class="circle">
+   <h1>76</h1>
+   <p> of 100</p><br>
+  </div> 
+  <div id="text">
+  <p>Great</p>
+  <p>You scored higher than 65% of<br>
+  the people who have taken <br> these tests.</p>
+  </div>
+</div>
+
+  <div class="summary">
+  <h2>Summary</h2>
+  <div id="red">
+  <img src="assets/images/icon-reaction.svg" >    
+  Reaction
+  <p><span id='nums'>80</span>  <span>/ 100</span></p>
+  </div>
+  <div id="yellow">
+  <img src="assets/images/icon-memory.svg" >    
+  Memory    
+  <p>&nbsp;&nbsp;<span id='nums'>92</span>  <span>/ 100</span></p>
+  </div>
+  <div id="green">
+  <img src="assets/images/icon-verbal.svg" >  
+  Verbal
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='nums'>61</span>   <span>/ 100</span></p>
+  </div>
+  <div id="blue">
+  <img src="assets/images/icon-visual.svg" >    
+  Visual
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='nums'>72</span>   <span>/ 100</span></p>
+ </div> 
+ <div id="button">Continue</div>
+  </div>
+ </div>
+</body>
+</html>
